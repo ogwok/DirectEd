@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../partials/Header";
 import Footer from "../partials/Footer";
 import TransactionSection from "../partials/TransactionSection";
+import TransactionTab from "../partials/TransactionTab";
 
 function Transactions() {
   return (
@@ -13,7 +14,7 @@ function Transactions() {
       <main className="grow">
         {/*  Page sections */}
 
-        <TransactionSection />
+        <TransactionTab />
       </main>
 
       {/*  Site footer */}

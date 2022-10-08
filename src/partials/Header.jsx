@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Transition from "../utils/Transition";
 import dapplogo from "../images/dapp-logo.svg";
 
 function Header({ mode }) {
+  const location = useLocation();
+  const [activeRoute, setActiveRoute] = useState();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [top, setTop] = useState(true);
   const trigger = useRef(null);
@@ -11,6 +13,7 @@ function Header({ mode }) {
 
   // close the mobile menu on click outside
   useEffect(() => {
+    setActiveRoute(location.pathname);
     const clickHandler = ({ target }) => {
       if (!mobileNav.current || !trigger.current) return;
       if (
@@ -71,7 +74,9 @@ function Header({ mode }) {
               <li>
                 <Link
                   to="/"
-                  className="font-bold underline text-white hover:text-blue-600 dark:text-white dark:hover:text-blue-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className={`
+                  ${activeRoute == "/" ? "underline font-bold" : ""}
+                   font-medium text-white hover:text-blue-60 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out`}
                 >
                   SCHOLARSHIP POOLS
                 </Link>
@@ -79,7 +84,13 @@ function Header({ mode }) {
               <li>
                 <Link
                   to="/scholar-section"
-                  className="font-medium text-white hover:text-blue-600 dark:text-white dark:hover:text-blue-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className={`
+                  ${
+                    activeRoute == "/scholar-section"
+                      ? "underline font-bold"
+                      : ""
+                  }
+                  font-medium text-white hover:text-blue-600 dark:text-white dark:hover:text-blue-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out`}
                 >
                   SCHOLARS' PROGRESS
                 </Link>
@@ -87,7 +98,9 @@ function Header({ mode }) {
               <li>
                 <Link
                   to="/transactions"
-                  className="font-medium text-white hover:text-blue-600 dark:text-white dark:hover:text-blue-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className={`
+                  ${activeRoute == "/transactions" ? "underline font-bold" : ""}
+                  font-medium text-white hover:text-blue-600 dark:text-white dark:hover:text-blue-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out`}
                 >
                   TRANSACTIONS
                 </Link>

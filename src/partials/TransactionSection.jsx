@@ -1,64 +1,59 @@
 import React from "react";
+import Accordion from "../utils/Accordion";
+import user1 from "../images/user-image-1.svg";
+import location_icon from "../images/location-icon.svg";
+import linkdlin_icon from "../images/linkdln-icon.svg";
+import twitter_icon from "../images/twitter-icon.svg";
 
 function TransactionSection() {
+  const data = [{ name: "Akinyi Zawadi", completedBlocks: 3, image: user1 }];
   return (
-    <section className="relative">
-      {/* Dark background */}
-
-      <div className="flex max-w-6xl mx-auto px-4 sm:px-6 mt-10 justify-center">
-        <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-9">
-            <h2 className="h3 font-playfair-display text-black">
-              Transaction Section
-            </h2>
-          </div>
-
-          {/* Section content */}
-          <div className="flex flex-col text-center space-y-3 mx-auto justify-center mb-28">
-            {/* table section */}
-
-            <div class="p-3 bg-banner rounded-lg">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
-                <tbody>
-                  <tr class=" dark:bg-gray-800">
-                    <td class="py-4 px-6">From address</td>
-                    <td class="py-4 px-6">
-                      addr93d9wek0wewjewas34asd3er4refsdfdsf
-                    </td>
-                  </tr>
-                  <tr class=" dark:bg-gray-800">
-                    <td class="py-4 px-6">Script hash</td>
-                    <td class="py-4 px-6">drewrfe4323423432432434sdasdds</td>
-                  </tr>
-                  <tr class=" dark:bg-gray-800">
-                    <td class="py-4 px-6">ADA sent:</td>
-                    <td class="py-4 px-6">500</td>
-                  </tr>
-                  <tr class=" dark:bg-gray-800">
-                    <td class="py-4 px-6">Token received</td>
-                    <td class="py-4 px-6">asset4303asd</td>
-                  </tr>
-                  <tr class=" dark:bg-gray-800">
-                    <td class="py-4 px-6">Total fees</td>
-                    <td class="py-4 px-6">0.1634</td>
-                  </tr>
-                  <tr class=" dark:bg-gray-800">
-                    <td class="py-4 px-6">Deadline:</td>
-                    <td class="py-4 px-6">11/23/24</td>
-                  </tr>
-                </tbody>
-              </table>
+    <>
+      {/* Faqs */}
+      <ul className="max-w-3xl mx-auto divide-white divide-y-2 bg-banner shadow-lg">
+        <li className="flex ml-20 py-5 space-x-48 items-center ">
+          <span>Name</span>
+          <span>Milestone Progress</span>
+          <span>Contact</span>
+        </li>
+        {data.map((item) => (
+          <Accordion
+            name={item.name}
+            completedBlocks={item.completedBlocks}
+            image={item.image}
+          >
+            <div className="ml-20">
+              <span className="flex">
+                <span className="mr-3">
+                  <img src={location_icon} />
+                </span>
+                <p className="text-neutral3 font-bold">Naivasha, Kenya</p>
+              </span>
+              <p className="text-neutral3 mt-3">
+                I'm a web developer with in-depth experience in UI/UX design. In
+                a nutshell, I create websites that help organizations address
+                business challenges and meet their needs. I manage everything
+                from website navigation and layout to a company's web hosting
+                and security architecture.
+              </p>
+              <span className="flex mt-5 space-x-60 items-center">
+                <p className="text-neutral3 text-sm ">
+                  https://userid.github.io/reponame
+                </p>
+                <span className="flex">
+                  <span className="ml-14 mr-3 cursor-pointer">
+                    <img src={linkdlin_icon} />
+                  </span>
+                  <span className="cursor-pointer">
+                    <img src={twitter_icon} />
+                  </span>
+                </span>
+              </span>
             </div>
-            <div>
-              <button className="inline-flex mt-5 items-center py-2 px-7 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Donate
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </Accordion>
+        ))}
+      </ul>
+    </>
   );
 }
 

@@ -8,6 +8,8 @@ module.exports = {
         footer: "#374756",
         footerInner: "#6B8065",
         banner: "#F3EEE2",
+        rings: "#D9D9D9",
+        neutral3: "#2B3035",
         slate: {
           900: "#101D2D",
         },
