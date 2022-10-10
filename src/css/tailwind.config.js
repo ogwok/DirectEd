@@ -10,6 +10,8 @@ module.exports = {
         banner: "#F3EEE2",
         rings: "#D9D9D9",
         neutral3: "#2B3035",
+        transactions: "#D4CEBD",
+        neutral8: "#E6E6E6",
         slate: {
           900: "#101D2D",
         },

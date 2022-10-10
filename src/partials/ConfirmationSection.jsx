@@ -1,4 +1,6 @@
 import React from "react";
+import PopUp from "../utils/PopUp";
+import Popup from "reactjs-popup";
 
 function ConfirmationSection() {
   return (
@@ -18,8 +20,8 @@ function ConfirmationSection() {
           <div className="flex flex-col text-center space-y-3 mx-auto justify-center mb-28">
             {/* table section */}
 
-            <div class="p-3 bg-banner rounded-lg">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
+            <div class="flex max-w-xs md:max-w-3xl p-3 bg-banner rounded-lg overflow-auto">
+              <table class=" w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
                 <tbody>
                   <tr class=" dark:bg-gray-800">
                     <td class="py-4 px-6">From address</td>
@@ -51,9 +53,17 @@ function ConfirmationSection() {
               </table>
             </div>
             <div>
-              <button className="inline-flex mt-5 items-center py-2 px-7 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Donate
-              </button>
+              <Popup
+                trigger={
+                  <button className="inline-flex mt-5 items-center py-2 px-7 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Confirm
+                  </button>
+                }
+              >
+                <div>
+                  <PopUp />
+                </div>
+              </Popup>
             </div>
           </div>
         </div>

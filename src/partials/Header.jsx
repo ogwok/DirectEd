@@ -111,7 +111,7 @@ function Header({ mode }) {
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <Link
-                  to="/request-demo"
+                  to="/#"
                   className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-primary bg-white rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   CONNECT WALLET{" "}
@@ -159,76 +159,34 @@ function Header({ mode }) {
                 <ul className="px-5 py-2">
                   <li>
                     <Link
-                      to="/pricing"
+                      to="/"
                       className="flex font-medium text-slate-800 hover:text-blue-600 py-2"
                     >
-                      Pricing
+                      SCHOLARSHIP POOLS
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/about"
+                      to="/scholar-section"
                       className="flex font-medium text-slate-800 hover:text-blue-600 py-2"
                     >
-                      About
+                      SCHOLARS' PROGRESS
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/blog"
+                      to="/transactions"
                       className="flex font-medium text-slate-800 hover:text-blue-600 py-2"
                     >
-                      Blog
+                      TRANSACTIONS
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/wall-of-love"
-                      className="flex font-medium text-slate-800 hover:text-blue-600 py-2"
+                      to="/#"
+                      className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800"
                     >
-                      Wall of Love
-                    </Link>
-                  </li>
-                  <li className="py-2 my-2 border-t border-b border-gray-200">
-                    <span className="flex font-medium text-slate-800 hover:text-blue-600 py-2">
-                      Resources
-                    </span>
-                    <ul className="pl-4">
-                      <li>
-                        <Link
-                          to="/404"
-                          className="text-sm flex font-medium text-slate-600 hover:text-blue-600 py-2"
-                        >
-                          404
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/support"
-                          className="text-sm flex font-medium text-slate-600 hover:text-blue-600 py-2"
-                        >
-                          Support
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link
-                      to="/signin"
-                      className="flex font-medium w-full text-slate-800 hover:text-blue-600 py-2"
-                    >
-                      Sign in
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/request-demo"
-                      className="flex font-medium text-blue-600 py-2 group"
-                    >
-                      Request Demo{" "}
-                      <span className="tracking-normal text-blue-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                        -&gt;
-                      </span>
+                      CONNECT WALLET
                     </Link>
                   </li>
                 </ul>

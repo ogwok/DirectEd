@@ -22,7 +22,7 @@ function ScholarProgressSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-slate-50">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:mt-5 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:mt-5 mt-8 md:pb-16">
             <h2 className="h2 font-playfair-display text-slate-800">
               Scholars’ Progress
             </h2>
@@ -30,7 +30,7 @@ function ScholarProgressSection() {
 
           {/* Faqs */}
           <ul className="max-w-3xl mx-auto divide-white divide-y-2 bg-banner rounded-lg shadow-lg">
-            <li className="flex ml-20 py-5 space-x-48 items-center ">
+            <li className="flex ml-7 md:ml-20 py-5 space-x-7 md:space-x-48 items-center ">
               <span>Name</span>
               <span>Milestone Progress</span>
               <span>Contact</span>

@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import BannerImage01 from "../images/kagumo-highschool.svg";
 import BannerImage02 from "../images/strathmore-highschool.svg";
+import ControlledPopup from "../utils/ControlledPopup";
+// import PopUp from "../utils/PopUp";
 
 function FeaturesHome03() {
+  let value2 = localStorage.getItem("visited");
+  const [popup, setPopup] = useState(value2 ? false : true);
+
+  useEffect(() => {
+    let value = localStorage.getItem("visited");
+    value ? setPopup(false) : setPopup(true);
+    localStorage.setItem("visited", true);
+  }, [popup]);
+
   return (
     <section className="relative">
       {/* Dark background */}
@@ -17,6 +28,7 @@ function FeaturesHome03() {
             </h2>
           </div>
 
+          <ControlledPopup open={popup} />
           {/* Section content */}
           <div className="max-w-sm mx-auto md:max-w-none grid gap-12 md:grid-cols-2 md:gap-x-10 md:gap-y-10 ">
             {/* 1st article */}
@@ -63,7 +75,7 @@ function FeaturesHome03() {
                   </div>
                   <Link
                     to="/selection"
-                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Donate Now
                   </Link>
@@ -115,7 +127,7 @@ function FeaturesHome03() {
                   </div>
                   <Link
                     to="selection"
-                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Donate Now
                   </Link>

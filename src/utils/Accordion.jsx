@@ -22,7 +22,7 @@ function Accordion({
   return (
     <Component>
       <button
-        className="h4 font-playfair-display flex items-center justify-between w-full text-left py-5 px-7"
+        className="h4 font-playfair-display flex items-center justify-between w-full text-left py-5 px-2 md:px-7"
         onClick={(e) => {
           e.preventDefault();
           setAccordionOpen(!accordionOpen);
@@ -35,18 +35,18 @@ function Accordion({
             <img src={image} />
           </span>
 
-          <span className="ml-8 text-sm">{name}</span>
+          <span className="flex-shrink ml-1 md:ml-8 text-sm">{name}</span>
         </div>
-        <div className="space-x-1">
+        <div className="flex-initial space-x-1">
           {Array(completedBlocks)
             .fill()
             .map(() => (
-              <span className="inline-flex items-center py-2 px-7 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300"></span>
+              <span className="inline-flex items-center py-2 px-1 md:px-7 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:outline-none focus:ring-blue-300"></span>
             ))}
           {Array(5 - completedBlocks)
             .fill()
             .map(() => (
-              <span className="inline-flex items-center py-2 px-7 text-sm font-medium text-center text-white bg-rings focus:ring-4 focus:outline-none focus:ring-blue-300"></span>
+              <span className="inline-flex items-center py-2 px-1 md:px-7 text-sm font-medium text-center text-white bg-rings focus:ring-4 focus:outline-none focus:ring-blue-300"></span>
             ))}
         </div>
         <div className="flex justify-center items-center">
