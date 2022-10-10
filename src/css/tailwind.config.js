@@ -22,7 +22,8 @@ module.exports = {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-        "playfair-display": ["Playfair Display", "serif"],
+        "playfair-display": ["sans", "serif"],
+        "primary-display": ["Poppins"],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],

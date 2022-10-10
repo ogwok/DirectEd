@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../partials/Header";
-import FeaturesHome03 from "../partials/FeaturesHome03";
+import ScholarshipPools from "../partials/ScholarshipPools";
 import Footer from "../partials/Footer";
 
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
       <main className="grow">
         {/*  Page sections */}
 
-        <FeaturesHome03 />
+        <ScholarshipPools />
       </main>
       {/*  Site footer */}
       <Footer />

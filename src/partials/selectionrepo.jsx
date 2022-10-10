@@ -4,8 +4,6 @@ import BannerImage01 from "../images/banner-image.svg";
 function SelectionSection() {
   return (
     <section className="">
-      {/* Dark background */}
-
       <div className="flex flex-col mt-10">
         {/* Section header */}
         <div className="flex">

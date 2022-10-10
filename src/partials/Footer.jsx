@@ -3,15 +3,14 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      {/* <div className="mx-auto px-4 sm:px-6"> */}
       <div className="bg-primary md:flex justify-center border-t-8 border-footer">
         {/* Bottom area */}
         <div className="md:flex md:items-center md:justify-between w-4/5 py-6 md:py-3 ">
-          {/* Social links */}
+          {/* links */}
           <div>
             <span
               onClick={() => window.open("https://directed.dev/")}
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-footerInner rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
+              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-footerInner rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer mb-2 md:mb-0"
             >
               Need Help?
             </span>
@@ -19,7 +18,7 @@ function Footer() {
           <div>
             <span
               onClick={() => window.open("https://directed.dev/")}
-              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-footerInner rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
+              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-footerInner rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer"
             >
               HAVE A SUGGESTION?
             </span>

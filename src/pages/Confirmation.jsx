@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../partials/Header";
-import FeaturesHome03 from "../partials/FeaturesHome03";
 import Footer from "../partials/Footer";
 import ConfirmationSection from "../partials/ConfirmationSection";
 

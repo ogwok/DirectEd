@@ -5,7 +5,7 @@ function TransactionExpired() {
   const data = [];
   return (
     <>
-      {/* Faqs */}
+      {/* Transaction Section */}
       <ul className="max-w-3xl mx-auto divide-white divide-y-2 bg-banner shadow-lg">
         <li className="flex text-sm md:ml-20 py-3 space-x-12 ml-1 md:space-x-36 items-center">
           <span>Type</span>

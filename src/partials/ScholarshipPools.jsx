@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import BannerImage01 from "../images/kagumo-highschool.svg";
 import BannerImage02 from "../images/strathmore-highschool.svg";
+import clockIcon from "../images/clock-icon.svg";
 import ControlledPopup from "../utils/ControlledPopup";
-// import PopUp from "../utils/PopUp";
+import PopUpWallet from "../utils/PopUpWallet";
 
-function FeaturesHome03() {
+function ScholarshipPools() {
   let value2 = localStorage.getItem("visited");
   const [popup, setPopup] = useState(value2 ? false : true);
 
@@ -17,21 +18,21 @@ function FeaturesHome03() {
 
   return (
     <section className="relative">
-      {/* Dark background */}
-
       <div className="flex max-w-6xl mx-auto px-4 sm:px-6 mt-10 justify-center">
         <div className="py-12 md:py-20 ">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-12">
             <h2 className="h2 font-playfair-display text-black">
               Scholarship Pools
             </h2>
           </div>
 
+          <PopUpWallet />
           <ControlledPopup open={popup} />
+
           {/* Section content */}
           <div className="max-w-sm mx-auto md:max-w-none grid gap-12 md:grid-cols-2 md:gap-x-10 md:gap-y-10 ">
-            {/* 1st article */}
+            {/* 1st school */}
             <article data-aos="fade-up">
               <div className="max-w-md bg-banner rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
@@ -60,7 +61,8 @@ function FeaturesHome03() {
                   </div>
                   <div className="flex flex-col mb-6 ">
                     <div className="flex justify-between">
-                      <span className="text-sm text-slate-400">
+                      <span className="flex text-sm text-slate-400 ml-5">
+                        <img className="mr-6" src={clockIcon} />
                         33 days left
                       </span>
                       <span className="text-sm text-slate-400">
@@ -71,7 +73,10 @@ function FeaturesHome03() {
                     <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 m-3">
                       <div className="bg-footerInner h-2.5 rounded-full w-4/6"></div>
                     </div>
-                    <span> $300 to fund the next scholarship </span>
+                    <span className="text-black">
+                      {" "}
+                      $300 to fund the next scholarship{" "}
+                    </span>
                   </div>
                   <Link
                     to="/selection"
@@ -83,7 +88,7 @@ function FeaturesHome03() {
               </div>
             </article>
 
-            {/* 2nd article */}
+            {/* 2nd school */}
             <article data-aos="fade-up">
               <div className="max-w-md bg-banner rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
@@ -112,7 +117,8 @@ function FeaturesHome03() {
                   </div>
                   <div className="flex flex-col mb-6 ">
                     <div className="flex justify-between">
-                      <span className="text-sm text-slate-400">
+                      <span className="flex text-sm text-slate-400 ml-5">
+                        <img className="mr-6" src={clockIcon} />
                         33 days left
                       </span>
                       <span className="text-sm text-slate-400">
@@ -123,7 +129,10 @@ function FeaturesHome03() {
                     <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 m-3">
                       <div className="bg-footerInner h-2.5 rounded-full w-4/6"></div>
                     </div>
-                    <span> $300 to fund the next scholarship </span>
+                    <span className="text-black">
+                      {" "}
+                      $300 to fund the next scholarship{" "}
+                    </span>
                   </div>
                   <Link
                     to="selection"
@@ -141,4 +150,4 @@ function FeaturesHome03() {
   );
 }
 
-export default FeaturesHome03;
+export default ScholarshipPools;

@@ -13,7 +13,7 @@ function TransactionCompleted() {
   ];
   return (
     <>
-      {/* Faqs */}
+      {/* Transaction Section */}
       <ul className="max-w-3xl mx-auto divide-white divide-y-2 bg-banner shadow-lg">
         <li className="flex text-sm md:ml-20 py-3 space-x-12 ml-1 md:space-x-36 items-center">
           <span>Type</span>
@@ -26,6 +26,7 @@ function TransactionCompleted() {
             name={item.name}
             completedBlocks={item.completedBlocks}
             image={item.image}
+            action="Email"
           >
             <div className="flex space-x-11 items-start ml-8">
               <span className="text-neutral3 text-sm mt-3">
